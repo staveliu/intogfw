@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Thronged Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />	
+<script src="js/jquery-1.11.1.min.js"></script>
+<!--webfonts-->
+<link href='https://fonts.googleapis.com/css?family=Antic' rel='stylesheet' type='text/css' />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600,700|Six+Caps' rel='stylesheet' type='text/css' />
+   <!--//webfonts-->
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<!------ Light Box ------>
+<link rel="stylesheet" href="css/swipebox.css">
+    <script src="js/jquery.swipebox.min.js"></script> 
+    <script type="text/javascript">
+		jQuery(function($) {
+			$(".swipebox").swipebox();
+		});
+	</script>
+    <!------ Eng Light Box ------>
+<script type="text/javascript" src="js/move-top.js"></script>
+       <script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+				});
+			});
+		</script>
+		<script type="text/javascript">
+		$(document).ready(function() {
+				/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+				*/
+		$().UItoTop({ easingType: 'easeOutQuart' });
+});
+</script>
+
+</head>
+<script language="javascript" type="text/javascript">  
+var code; //在全局 定义验证码   
+function createCode() {
+    code = "";
+    var codeLength = 6;//验证码的长度   
+    var checkCode = document.getElementById("checkCode");
+    var selectChar = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9,'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z');//所有候选组成验证码的字符，当然也可以用中文的   
+   
+    for (var i = 0; i < codeLength; i++) {
+        var charIndex = Math.floor(Math.random() * 36);
+        code += selectChar[charIndex];
+    }
+    //alert(code);
+    if (checkCode) {
+        checkCode.className = "code";
+        checkCode.value = code;
+    }
+}
+   
+function validate() {
+    var inputCode = document.getElementById("input1").value;
+    if (inputCode.length <= 0) {
+        alert("请输入验证码！");
+		
+    } else if (inputCode != code) {
+        alert("验证码输入错误！");
+		
+    createCode();//刷新验证码   
+    } else {
+     document.getElementById("form1").submit();  
+    }
+}
+</script>
+<body onload="createCode()">
+ <!-- header -->
+
+	 <!-- header-bottom -->
+	<div class="header-bottom">
+		<div class="container">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<!--/.navbar-header-->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+					 <li><a href="index.php" >申请</a></li>
+						<li><a href="index.php?action=query" >查询申请</a></li>
+						 <li><a href="index.php?action=admin" >工作人员后台</a></li>
+                      <p>&nbsp;</p>
+					</ul>
+				</div>
+				<!--/.navbar-collapse-->
+			</nav>
+		</div>
+	</div>
+	<!-- /header-bottom -->
+
+<!-- header -->
+<!-- banner -->
+<center>
+</center>
+<!-- banner -->
+<!-- services -->
+	<div class="services" id="services">
+    <center>
+		<div class="container">
+				<h3>填写你的申请表</h3>
+				<p><strong>欢迎申请澳科大免费的翻墙回国服务</strong>(请先阅读以下使用协议)</p>
+		  <p>*服务提供目的：为了让同学们更方便</p>
+<p>的使用国内的一些影音产品如网易云</p>
+<p>音乐、BiliBili等等……</p>
+<p>*本服务是全免费的，但是由于服务器</p>
+<p>资源有限，本服务仅限量提供，我们</p>
+<p>会根据实际情况以及申请时间顺序为</p>
+<p>最先申请的30名同学优先开通。</p>
+<p>*本服务不保证速度翻墙回国内，但是</p>
+<p>可以保证稳定使用。</p>
+<p>*本服务只能为一台设备安装，可以选</p>
+<p>择安卓客户端或者电脑客户端。</p>
+<p>*以下为申请表，请认真填写，一人只</p>
+<p>能填写一份。</p>
+<form id="form1" name="form1" method="post" action="index.php?action=submit">
+  <p>*QQ：
+    <label for="qq"></label>
+<input type="text" name="qq" id="qq" />
+  </p>
+  <p>*客户端种类：
+    <label for="pt"></label>
+    <label for="pt"></label>
+    <select name="pt" id="pt">
+      <option value="android">安卓</option>
+      <option value="PC">电脑</option>
+    </select>
+  </p>
+  <p>*验证码：
+    <input type="text" id="input1" /><input type="text" onclick="createCode()" readonly id="checkCode" class="unchanged" style="width: 80px" />
+  </p>
+  <p>
+    <input type="button" name="button" id="button" value="提交" onclick="validate();"/>
+  </p>
+</form>
+		</div>
+      </center>
+	</div>
+<!-- /services -->
+
+<!-- project --><!-- /project -->
+<!-- case --><!-- /case -->
+<!-- portfolio --><!-- /portfolio --><!-- clients -->
+<div class="client" id="clients"></div>
+
+</body>
+</html>
