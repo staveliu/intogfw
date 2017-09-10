@@ -29,11 +29,11 @@ if ($action=="query"){
 	include 'header.htm';
 	echo "
 		<form name='form1' method='post' action='index.php?action=queryget'>
-    <p>请输入你的申请QQ：</p>
-    <label for='qq'></label>
-    <input type='text' name='qq' id='qq'>
-	<input type='submit' name='button' id='button' value='submit' />
-	</form>
+			<p>请输入你的申请QQ：</p>
+			<label for='qq'></label>
+		    <input type='text' name='qq' id='qq'>
+		    <input type='submit' name='button' id='button' value='submit' />
+		</form>
 	";
 	include 'footer.htm';
 	exit();
@@ -63,12 +63,12 @@ if ($action=="queryget"){
 			echo "您的翻墙端口为：".$rows["port"]."<br>";
 			echo "翻墙登陆密码为：".$rows["password"]."<br>";
 			echo "
-			<p>翻墙使用方法</p>
-			<p>Windows PC平台可以通过<a href='https://github.com/shadowsocksr-backup/shadowsocksr-csharp/releases/download/4.7.0/ShadowsocksR-4.7.0-win.7z'>这里</a>下载最新翻墙客户端</p>
-			<p>Android平台可以通过<a href='https://github.com/shadowsocksrr/shadowsocksr-android/releases/download/3.5.1/shadowsocksr-android-3.5.1.apk'>这里</a>下载最新翻墙客户端</p>
-			<p>下载完后添加新服务器，输入上述给予的端口和密码，加密方法为chacha20，协议和混淆为默认就好</p>
-			<p>然后开启代理即可使用国内各种应用</P>
-			<p>开始您的畅游之旅吧orz</p>
+				<p>翻墙使用方法</p>
+				<p>Windows PC平台可以通过<a href='https://github.com/shadowsocksr-backup/shadowsocksr-csharp/releases/download/4.7.0/ShadowsocksR-4.7.0-win.7z'>这里</a>下载最新翻墙客户端</p>
+				<p>Android平台可以通过<a href='https://github.com/shadowsocksrr/shadowsocksr-android/releases/download/3.5.1/shadowsocksr-android-3.5.1.apk'>这里</a>下载最新翻墙客户端</p>
+				<p>下载完后添加新服务器，输入上述给予的端口和密码，加密方法为chacha20，协议和混淆为默认就好</p>
+				<p>然后开启代理即可使用国内各种应用</P>
+				<p>开始您的畅游之旅吧orz</p>
 			";
 		}
 		include 'footer.htm';
@@ -82,12 +82,12 @@ if ($action=="admin"){
 	if ($_COOKIE["password"]!="Stave2333"){
 	echo "
 		<form name='form1' method='post' action='index.php?action=adminlogin'>
-    <p>请输入管理员密码：</p>
-    <label for='password'></label>
-    <input type='text' name='password' id='password'>
-	<input type='submit' name='button' id='button' value='submit' />
-	</form>
-	";
+		 <p>请输入管理员密码：</p>
+		  <label for='password'></label>
+		  <input type='text' name='password' id='password'>
+		  <input type='submit' name='button' id='button' value='submit' />
+		</form>
+		";
 	include 'footer.htm';
 	exit();
 	}else{
@@ -128,7 +128,7 @@ if ($action=="admin"){
 		echo "</table>";
 
 	}
-include 'footer.htm';	
+	include 'footer.htm';	
 	exit();
 }
 if ($action=="adminlogin"){
@@ -170,15 +170,14 @@ if ($action=="changeinstall"){
 	}else{
 		echo "
 		<form name='form1' method='post' action='index.php?action=install&qq=".$qq."'>
-  <p>端口：
-    <input type='text' name='port' id='port'>
-  </p>
-  <p>密码： 
-    <input type='text' name='password' id='password'>
-	
-  </p>
-  <input type='submit' name='button' id='button' value='submit' />
-</form>
+		<p>端口：
+	    <input type='text' name='port' id='port'>
+	    </p>
+	    <p>密码： 
+        <input type='text' name='password' id='password'>
+	    </p>
+        <input type='submit' name='button' id='button' value='submit' />
+        </form>
 		";
 	}
 	include 'footer.htm';
