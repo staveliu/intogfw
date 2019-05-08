@@ -1,5 +1,5 @@
 ﻿<?php
-mysql_connect("localhost","slot1","153007lwj");
+mysql_connect("localhost","","");
 mysql_select_db("slot1");
 echo "<head><title>澳科大新生翻墙回国申请</title></head>";
 $action=$_GET["action"];
